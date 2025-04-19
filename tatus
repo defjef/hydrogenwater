@@ -1,0 +1,7 @@
+[33mc7a16e4[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m Fixed background colors and improved ElevenLabs widget placement
+[33m8e95758[m Updated CSP with comprehensive ElevenLabs permissions
+[33m7f45b2a[m Updated CSP to allow audio worklet modules
+[33m3e9ab58[m Updated CSP to allow ElevenLabs widget
+[33m295ee75[m Added favicon and web manifest
+[33mee2a173[m Added YouTube video embed to How It Works section
+[33m1910dc7[m Initial commit: Hydrogen Water landing page
