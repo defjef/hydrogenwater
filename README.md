@@ -1,86 +1,62 @@
 # Hydrogen Water Landing Page
 
-A modern, responsive landing page for Hydrogen Water built with Tailwind CSS.
+A high-converting, visually clean landing page for Hydrogen Water, featuring an ElevenLabs voice interaction widget.
 
-## Features
+## 🚀 Features
 
-- 🎨 Clean, modern design with Tailwind CSS
-- 📱 Fully responsive layout
-- ⚡ Fast loading with CDN-based Tailwind
-- 📝 Email signup forms
-- 🎯 Optimized for conversions
-- 🔍 SEO-friendly structure
+- Modern, responsive design with Tailwind CSS
+- ElevenLabs voice interaction widget
+- Mobile-friendly layout
+- SEO-optimized structure
 
-## Getting Started
+## 🛠️ Tech Stack
 
-1. Clone this repository
-2. Open `index.html` in your browser to view the page
-3. Customize the content and styling as needed
+- HTML5
+- Tailwind CSS
+- ElevenLabs Convai Widget
+- Netlify for hosting
 
-## Customization
+## 📋 Project Structure
 
-### Colors
-The color scheme can be modified in the Tailwind configuration within the `index.html` file. Look for the `tailwind.config` section:
-
-```javascript
-tailwind.config = {
-    theme: {
-        extend: {
-            colors: {
-                primary: {
-                    50: '#f0f9ff',
-                    100: '#e0f2fe',
-                    // ... other shades
-                }
-            }
-        }
-    }
-}
+```
+hydrogen-water/
+├── public/                  # Netlify publish directory
+│   ├── index.html           # Main landing page
+│   ├── js/                  # JavaScript files
+│   │   └── elevenlabs-init.js # Custom ElevenLabs initialization
+│   └── _headers             # Netlify headers configuration
+├── audio-worklet/           # GitHub Pages repository for audio worklet
+│   ├── audio-concat-processor.js # Audio worklet processor
+│   ├── _headers             # GitHub Pages headers
+│   └── README.md            # Documentation for audio worklet
+├── netlify.toml             # Netlify configuration
+└── README.md                # This file
 ```
 
-### Forms
-The page includes two forms:
-1. Hero section signup
-2. Newsletter subscription
+## 🔧 Setup Instructions
 
-To make these functional, you'll need to:
-1. Set up a form handling service (e.g., Formspree)
-2. Add the form action URL to the form elements
-3. Configure any additional form settings
+### 1. Deploy the Main Landing Page to Netlify
 
-### Images
-Replace the placeholder images with your own:
-- Logo
-- Trusted by section logos
-- About section image
-- Video thumbnail
-- Testimonial avatars
+1. Push this repository to GitHub
+2. Connect the repository to Netlify
+3. Set the publish directory to `public`
+4. Deploy the site
 
-## Deployment
+### 2. Deploy the Audio Worklet to GitHub Pages
 
-### Netlify Deployment
-1. Create a new site on Netlify
-2. Connect your repository
-3. Deploy with default settings
+1. Create a new GitHub repository (e.g., `hydrogen-water-audio-worklet`)
+2. Push the contents of the `audio-worklet` directory to the repository
+3. Enable GitHub Pages in the repository settings
+4. Update the URL in `public/js/elevenlabs-init.js` to point to your GitHub Pages URL
 
-### Manual Deployment
-1. Build your site locally
-2. Upload the files to your hosting provider
-3. Ensure all assets are properly linked
+### 3. Update the Audio Worklet URL
 
-## Browser Support
+Edit `public/js/elevenlabs-init.js` and replace:
+```javascript
+await audioContext.audioWorklet.addModule('https://yourusername.github.io/audio-worklet/audio-concat-processor.js');
+```
+with your actual GitHub Pages URL.
 
-- Chrome (latest)
-- Firefox (latest)
-- Safari (latest)
-- Edge (latest)
+## 📝 License
 
-## License
-
-MIT License - feel free to use this template for your projects.
-
-## Credits
-
-- Font: Inter (Google Fonts)
-- Icons: Heroicons
-- Tailwind CSS 
+MIT 
