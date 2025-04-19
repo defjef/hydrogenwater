@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', async () => {
       const audioContext = new AudioContext();
       
       // Load the audio worklet from GitHub Pages
-      await audioContext.audioWorklet.addModule('https://yourusername.github.io/audio-worklet/audio-concat-processor.js');
+      await audioContext.audioWorklet.addModule('https://defjef.github.io/hydrogen-water-audio-worklet/audio-concat-processor.js');
       
       // Initialize the ElevenLabs widget with our custom audio context
       window.ElevenLabsConvai.init({
